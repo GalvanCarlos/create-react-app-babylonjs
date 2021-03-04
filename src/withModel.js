@@ -65,8 +65,8 @@ const WithModel = props => {
       )
     )
   }
-
-  let baseUrl = "https://raw.githubusercontent.com/GalvanCarlos/create-react-app-babylonjs/master/src/";
+  let baseUrl = "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/";
+  // let baseUrl = "https://raw.githubusercontent.com/GalvanCarlos/create-react-app-babylonjs/master/src/";
 
   return (
     <div>
@@ -86,12 +86,12 @@ const WithModel = props => {
               <arcRotateCamera name="camera1" alpha={Math.PI / 2} beta={Math.PI / 2} radius={9.0} target={Vector3.Zero()} minZ={0.001} />
               <hemisphericLight name="light1" intensity={0.7} direction={Vector3.Up()} />
               
-              <ScaledModelWithProgress rootUrl={`${baseUrl}`} sceneFilename="scene.gltf" scaleTo={3} 
+              <ScaledModelWithProgress rootUrl={`${baseUrl}Buggy/glTF/`} sceneFilename="Buggy.gltf" scaleTo={3} 
                 progressBarColor={Color3.FromInts(255, 165, 0)} center={new Vector3(2.5, 0, 0)}
                 onModelLoaded={onModelLoaded}
               />
 
-              <ScaledModelWithProgress rootUrl={`${baseUrl}`} sceneFilename="scene.gltf" scaleTo={avocadoSettings.avocadoScaling} 
+              <ScaledModelWithProgress rootUrl={`${baseUrl}Avocado/glTF/`} sceneFilename="Avocado.gltf" scaleTo={avocadoSettings.avocadoScaling} 
                 progressBarColor={Color3.FromInts(255, 165, 0)} center={new Vector3(-2.5, avocadoSettings.avocadoYPos, 0)}
               />
             </Scene>
